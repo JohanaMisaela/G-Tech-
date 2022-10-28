@@ -419,7 +419,7 @@ router.post('/getclass', async (req, res, next) => {
 const cla = req.body.cla
 console.log(cla)
 //onsole.log(cls)
-db.query(`SELECT * FROM Etudiant WHERE Classe_Etudiant='L1G2'`,
+db.query(`SELECT * FROM Etudiant WHERE Classe_Etudiant='${cla}'`,
 (err,data) => {
 if(err){
     console.log("Impossible de recuperer les donnees");
